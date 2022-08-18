@@ -1,0 +1,3 @@
+#+title: TRAMP-yadm
+
+=tramp-yadm= adds an Emacs [[http://www.gnu.org/software/tramp/][TRAMP]] method for accessing your [[https://yadm.io][yadm]] dotfiles.
