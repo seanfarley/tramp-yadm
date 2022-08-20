@@ -1,3 +1,23 @@
 #+title: TRAMP-yadm
 
-=tramp-yadm= adds an Emacs [[http://www.gnu.org/software/tramp/][TRAMP]] method for accessing your [[https://yadm.io][yadm]] dotfiles.
+=tramp-yadm= adds an Emacs [[http://www.gnu.org/software/tramp/][TRAMP]] method for accessing your [[https://yadm.io][yadm]] dotfiles. This
+package adds support for [[http://magit.vc][magit]] and [[https://projectile.mx][projectile]] as well.
+
+* Installation
+For [[http://github.com/doomemacs/doomemacs][Doom Emacs]] users, clone this repo somewhere and
+
+#+begin_src emacs-lisp
+(package! tramp-yadm
+  :recipe (:local-repo "~/somewhere/tramp-yadm"))
+#+end_src
+
+Otherwise, do the =load-path= and =require= dance.
+
+* Usage
+
+Open your =yadm= dotfiles files by prepending =/yadm::~=.to the file, or by adding
+this snippet to your config.
+
+#+begin_src emacs-lisp
+(add-to-list 'projectile-known-projects "/yadm::~")
+#+end_src
