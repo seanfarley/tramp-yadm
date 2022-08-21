@@ -125,10 +125,12 @@ directory) from being listed."
 (tramp-register-foreign-file-name-handler
  #'tramp-yadm-file-name-p #'tramp-yadm-file-name-handler)
 
-
-(advice-add #'magit-list-files
-            :around
-            #'tramp-yadm-magit-list-files)
+;;;###autoload
+(defun tramp-yadm-register ()
+  "Initialize and advise `magit'."
+  (advice-add #'magit-list-files
+              :around
+              #'tramp-yadm-magit-list-files))
 
 (provide 'tramp-yadm)
 ;;; tramp-yadm.el ends here
