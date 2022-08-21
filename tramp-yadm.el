@@ -98,6 +98,7 @@ Accepts OUTPUT-BUFFER and ERROR-BUFFER for compatibility with
                    command)))
     (tramp-handle-shell-command command output-buffer error-buffer)))
 
+;;;###autoload
 (defun tramp-yadm-magit-list-files (orig-fn &rest args)
   "Wrap `magit-list-files' ORIG-FN with ARGS.
 
