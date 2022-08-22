@@ -29,7 +29,7 @@ need to call =tramp-yadm-register=. For example, I use the following,
 #+end_src
 
 * Usage
-Open your =yadm= dotfiles files by prepending =/yadm::~=.to the file, or by adding
+Open your =yadm= dotfiles files by prepending =/yadm::~= to the file, or by adding
 this snippet to your config.
 
 #+begin_src emacs-lisp
