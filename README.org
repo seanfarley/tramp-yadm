@@ -1,4 +1,9 @@
 #+title: TRAMP-yadm
+#+author: seanfarley
+
+#+html: <p><img src="https://img.shields.io/badge/Emacs-26.1+-blueviolet.svg?logo=GNU%20Emacs&logoColor=white">
+#+html: <img src="https://img.shields.io/badge/license-GPL_3-green.svg">
+#+html: <a href="https://github.com/seanfarley/tramp-yadm/actions?query=workflow%3ACI"><img src="https://github.com/seanfarley/tramp-yadm/workflows/CI/badge.svg"></a></p>
 
 =tramp-yadm= adds an Emacs [[http://www.gnu.org/software/tramp/][TRAMP]] method for accessing your [[https://yadm.io][yadm]] dotfiles. This
 package adds support for [[http://magit.vc][magit]] and [[https://projectile.mx][projectile]] as well.
