@@ -4,14 +4,24 @@
 package adds support for [[http://magit.vc][magit]] and [[https://projectile.mx][projectile]] as well.
 
 * Installation
-For [[http://github.com/doomemacs/doomemacs][Doom Emacs]] users, clone this repo somewhere and
+For [[http://github.com/doomemacs/doomemacs][Doom Emacs]] users, just add to your config,
 
 #+begin_src emacs-lisp
 (package! tramp-yadm
-  :recipe (:local-repo "~/somewhere/tramp-yadm"))
+  :recipe (:host github :repo "seanfarley/tramp-yadm"))
 #+end_src
 
-Otherwise, do the =load-path= and =require= dance.
+Otherwise, do the =load-path= and =require= dance. If you want to speed up magit by
+having it not recursive list untracked files from your home directory, you'll
+need to call =tramp-yadm-register=. For example, I use the following,
+
+#+begin_src emacs-lisp
+(use-package! tramp-yadm
+  :defer t
+  :init
+  (after! magit
+    (tramp-yadm-register)))
+#+end_src
 
 * Usage
 
