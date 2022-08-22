@@ -42,6 +42,7 @@
 (defvar tramp-yadm-file-name-handler-alist
   (cl-copy-list tramp-sh-file-name-handler-alist))
 
+;;;###autoload
 (defun tramp-yadm-file-name-p (filename)
   "Check if it's a FILENAME for yadm."
   (and (tramp-tramp-file-p filename)
@@ -49,6 +50,7 @@
                  (tramp-dissect-file-name filename))
                 tramp-yadm-method)))
 
+;;;###autoload
 (defun tramp-yadm-file-name-handler (operation &rest args)
   "Invoke the yadm handler for OPERATION and ARGS.
 First arg specifies the OPERATION, second arg is a list of
@@ -57,6 +59,7 @@ arguments to pass to the OPERATION."
       (save-match-data (apply (cdr fn) args))
     (tramp-run-real-handler operation args)))
 
+;;;###autoload
 (defun tramp-yadm-handle-expand-file-name (name &optional dir)
   "Like `tramp-sh-handle-expand-file-name' for yadm file NAME.
 
@@ -70,7 +73,7 @@ Since yadm has a non-default GIT_DIR, we need to map it back to .git."
       (expand-file-name "/yadm::~/.local/share/yadm/repo.git")
     (tramp-sh-handle-expand-file-name name dir)))
 
-
+;;;###autoload
 (defun tramp-yadm-handle-expand-file-nam2 (name &optional dir)
   "Like `tramp-sh-handle-expand-file-name' for yadm file NAME.
 
@@ -83,6 +86,7 @@ Since yadm has a non-default GIT_DIR, we need to map it back to .git."
                                        (expand-file-name dir))))))
       (expand-file-name "/yadm::~/.local/share/yadm/repo.git")))
 
+;;;###autoload
 (defun tramp-yadm-handle-shell-command (command &optional
                                                 output-buffer
                                                 error-buffer)
