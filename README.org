@@ -35,3 +35,19 @@ this snippet to your config.
 #+begin_src emacs-lisp
 (add-to-list 'projectile-known-projects "/yadm::~")
 #+end_src
+
+* Known issues
+
+** =Remote file error: Forbidden reentrant call of Tramp=
+When using multiple processes such as =flycheck=, there is occassionally a
+reentrant error.
+
+** =git-gutter= not turning on automatically
+The needs more investigate but it might be in how =git-gutter= is checking for a
+git repo.
+
+*** If /yadm::~ is the first (and only) project loaded, git-gutter will display ascii and not unicode
+Not sure about this one.
+
+** projectile history list is not saved
+If fixed, this would eliminate or greatly modify the usage section.
