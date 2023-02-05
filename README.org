@@ -22,10 +22,9 @@ need to call =tramp-yadm-register=. For example, I use the following,
 
 #+begin_src emacs-lisp
 (use-package! tramp-yadm
-  :defer t
+  :after (tramp projectile)
   :init
-  (after! magit
-    (tramp-yadm-register)))
+  (tramp-yadm-register))
 #+end_src
 
 * Usage
