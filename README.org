@@ -39,7 +39,7 @@ this snippet to your config.
 * Known issues
 
 ** =Remote file error: Forbidden reentrant call of Tramp=
-When using multiple processes such as =flycheck=, there is occassionally a
+When using multiple processes such as =flycheck=, there is occasionally a
 reentrant error.
 
 ** =git-gutter= not turning on automatically
